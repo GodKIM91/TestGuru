@@ -6,15 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users_tests = UsersTest.create([
-  { user_id: 1, test_id: 1 },
-  { user_id: 1, test_id: 2 },
-  { user_id: 1, test_id: 3 },
-  { user_id: 2, test_id: 1 },
-  { user_id: 2, test_id: 2 },
-  { user_id: 2, test_id: 3 }
-])
-
 users = User.create([
   { name: 'Bob', email: "bob@gmail.com" },
   { name: 'Sam', email: "sam@gmail.com" },
@@ -113,5 +104,14 @@ answers = Answer.create([
   { body: '1.0.0', correct: false, question_id: 14},
   { body: '0.0.1', correct: false, question_id: 14},
   { body: '0.1.0', correct: true, question_id: 14}
+])
+
+users_tests = UsersTest.create([
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[1].id },
+  { user_id: users[0].id, test_id: tests[2].id },
+  { user_id: users[1].id, test_id: tests[0].id },
+  { user_id: users[1].id, test_id: tests[1].id },
+  { user_id: users[1].id, test_id: tests[2].id }
 ])
 
