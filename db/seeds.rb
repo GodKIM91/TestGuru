@@ -106,7 +106,7 @@ answers = Answer.create([
   { body: '0.1.0', correct: true, question_id:  questions[13].id }
 ])
 
-users_tests = UsersTest.create([
+tests_users = TestsUser.create([
   { user_id: users[0].id, test_id: tests[0].id },
   { user_id: users[0].id, test_id: tests[1].id },
   { user_id: users[0].id, test_id: tests[2].id },
