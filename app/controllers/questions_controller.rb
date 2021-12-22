@@ -14,8 +14,12 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = @test.questions.create!(question_params)
-    render plain: question.inspect
+    question = @test.questions.create(question_params)
+    if question.persisted?
+      render plain: 'Question created!'
+    else
+      render plain: 'Save error, check question params!'
+    end
   end
 
   def destroy
@@ -24,7 +28,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render inline: "#{@question.body}"
+    render plain: "#{@question.body}"
   end
 
   private
