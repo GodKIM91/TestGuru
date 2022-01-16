@@ -13,14 +13,13 @@ class QuestionsController < ApplicationController
   def show; end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      @test = @question.test
-      redirect_to @test
+      redirect_to @question.test
     else
       render :new
     end
@@ -30,8 +29,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      @test = @question.test
-      redirect_to @test
+      redirect_to @question.test
     else
       render :edit
     end
@@ -39,8 +37,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    @test = @question.test
-    redirect_to @test
+    redirect_to @question.test
   end
 
   private
