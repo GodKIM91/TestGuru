@@ -1,18 +1,18 @@
 <p>
-  <strong>Test:</strong>
+  <strong>Тест:</strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong>Уровень:</strong>
   <%= @test.level %>
 </p>
 
-<strong>Test questions:</strong>
+<strong>Вопросы теста:</strong>
 <table>
   <%= render @questions %>
 </table>
 <br>
-<%= link_to 'Edit test', edit_test_path(@test) %> |
-<%= link_to 'Add question', new_test_question_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Редактировать тест', edit_test_path(@test) %> |
+<%= link_to 'Добавить вопрос', new_test_question_path(@test) %> |
+<%= link_to 'Назад', tests_path %>

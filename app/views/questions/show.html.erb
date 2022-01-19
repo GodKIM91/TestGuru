@@ -1,11 +1,11 @@
 <strong>Вопрос: <%= @question.body %></strong><br>
 
 <h2>Ответы:</h2>
-<%= link_to 'New answer', new_question_answer_path(@question) %>
+<%= link_to 'Новый ответ', new_question_answer_path(@question) %>
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Edit question', edit_question_path(@question) %>
-<%= link_to 'Delete question', question_path(@question), method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back to test', test_path(@question.test) %>
+<%= link_to 'Редактировать вопрос', edit_question_path(@question) %>
+<%= link_to 'Удалить вопрос', question_path(@question), method: :delete, data: { confirm: 'Вы уверены?' } %>
+<%= link_to 'Назад к тестам', test_path(@question.test) %>
