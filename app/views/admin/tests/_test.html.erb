@@ -3,9 +3,9 @@
   <td><%= test.category.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-  <td><%= link_to 'Delete', admin_test_path(test),
+  <td><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('.delete'), admin_test_path(test),
                   method: :delete,
-                  data: {confirm: "Delele test #{test.title}?"} %>
+                  data: {confirm: t('.del_confirm', title: test.title)} %>
   </td>
 </tr>

@@ -1,0 +1,31 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+      admin: "Админ"
+
+    attributes:
+      test:
+        title: "Наименование"
+        category: "Категория"
+      question:
+        body: "Тело вопроса"
+      answer:
+        body: "Тело ответа"
+        question: "Вопрос"
+
+    errors:
+      messages:
+        blank: "не может быть пустым"
+      models:
+        answer:
+          attributes:
+            question:
+              limit: "переполнен ответами"
+
+        
+        
+        

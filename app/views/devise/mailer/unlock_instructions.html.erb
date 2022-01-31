@@ -1,0 +1,7 @@
+<p><%= t('.hello', email: @resource.email) %></p>
+
+<p><%= t('.message_1') %></p>
+
+<p><%= t('.message_2') %></p>
+
+<p><%= link_to t('.unlock_my_acc'), unlock_url(@resource, unlock_token: @token) %></p>

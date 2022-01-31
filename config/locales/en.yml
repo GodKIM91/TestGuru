@@ -1,33 +1,156 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Author"
+      question:
+        body: "Question body"
+      answer: 
+        body: "Answer body"
+        correct: "Correct?"
+  users:
+    sessions:
+      welcome: "Hello, %{user}!"
+ 
+  admin:
+    nav:
+      logout: "Logout"
+      admin_panel: "TestGuru admin panel"
+      welcome: "Hello, admin %{user}!"
+    tests:
+      index:
+        header: "Tests list"
+        create: "Create test"
+        name: "Title"
+        category: "Category"
+        level: "Level"
+        questions_qty: "Questions q-ty"
+        actions: "Actions"
+      form:
+        back: "Back"
+      create:
+        success: "Test succsessfuly created"
+      update:
+        success: "Test succsessfuly updated"
+      destroy:
+        success: "Test succsessfuly deleted"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        del_confirm: "Delete test %{title}?"
+      show:
+        test_header: "Test:"
+        level_header: "Level:"
+        questions_header: "Test questions:"
+        edit_test: "Edit test"
+        add_question: "Add question"
+        back: "Back"
+    questions:
+      form:
+        back: "Back"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        del_confirm: "Delete question?"
+      create:
+        success: "Question succsessfuly created"
+      update:
+        success: "Question succsessfuly updated"
+      destroy:
+        success: "Question succsessfuly deleted"
+      show:
+        question_header: "Question: %{question}"
+        answers_list: "Answers:"
+        new_answer: "Create new answer"
+        edit: "Edit"
+        delete: "Delete question"
+        back: "Back"
+        del_confirm: "Delete question?"
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        del_confirm: "Delete answer?"
+      create:
+        success: "Answer succsessfuly created"
+      update:
+        success: "Answer succsessfuly updated"
+      destroy:
+        success: "Answer succsessfuly deleted"
+      edit:
+        header: "Answer editing:"
+        back: "Back"
+      new:
+        header: "Answer creating:"
+        back: "Back"
+      show:
+        header: "Question:"
+        answer_header: "Answer:"
+        correctly: "Correct?"
+
+  layouts:
+    admin:
+      header: "TestGuru admin panel"
+    application:
+      header: "TestGuru"
+
+  shared:
+    footer:
+      project: "Education project in the Thinknetica school"
+    navbar:
+      welcome: "Hello, %{user}!"
+      project: "TestGuru"
+      logout: "Logout"
+      signup: "Sign up"
+      login: "Log in"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  test_passages:
+    show:
+      test_passing: "Test passing: "
+      next: "Next"
+      counter: "Question %{current_question_position} from %{questions_count}"
+    result:
+      header: "Test %{title} completed!"
+      success: "Result: %{success_percent}%. Success!"
+      fail: "Result: %{fail_percent}%. Fail!"
+      tests_list: "Try more tests"
+  
+  tests:
+    test:
+      start: "Start"
+    index:
+      header: "Tests list:"
+      name: "Title"
+      category: "Category"
+      level: "Level"
+      questions_qty: "Questions q-ty"
+      actions: "Actions"
+  
+  tests_mailer:
+    completed_test:
+      subject: "You have just completed the TestGuru test!"
+      
+      
