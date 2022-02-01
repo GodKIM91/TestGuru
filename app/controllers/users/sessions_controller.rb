@@ -11,7 +11,8 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
-    flash[:notice] = "Hello, #{current_user.first_name}!" if current_user
+    
+    flash[:notice] = t('.welcome', user: current_user.first_name.empty? ? current_user.email : current_user.first_name)
   end
 
   # DELETE /resource/sign_out

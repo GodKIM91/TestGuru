@@ -1,11 +1,13 @@
-# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
-
 en:
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      new:
+        header: "Send confirmation instructions one more time"
+        email: "Email"
+        resend_confirmation_instructions: "Send confirmation instructions one more time" 
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
@@ -19,14 +21,31 @@ en:
     mailer:
       confirmation_instructions:
         subject: "Confirmation instructions"
+        welcome: "Welcome, %{email}!"
+        you_can_confirm_message: "You can to confirm your account by the link below:"
+        confirm_my_acc: "Confirm account"
       reset_password_instructions:
         subject: "Reset password instructions"
+        hello: "Hello, %{email}!"
+        message_1: "Change password link has been requested. You can do it by the link below:"
+        change_my_password: "Change my password"
+        message_2: "If you have not done so, please ignore this letter."
+        message_3: "Your password will not change unless you follow the link above and create a new password."
       unlock_instructions:
         subject: "Unlock instructions"
+        hello: "Hello, %{email}!"
+        message_1: "Your account has been blocked due to a high number of login attempts."
+        message_2: "Click below link for unlock you account:"
+        unlock_my_acc: "Unlock my account"
       email_changed:
         subject: "Email Changed"
+        hello: "Hello, %{email}!"
+        message_unconfirmed: "We have contacted you to notify you that your email is changing to %{email_new}."
+        message: "We have contacted you to notify you that your email has been changed to %{email}."
       password_change:
         subject: "Password Changed"
+        hello: "Hello, %{email}!"
+        message: "We notify you that the password has been changed!"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -36,6 +55,16 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      new:
+        header: "Forgot your password?"
+        email: "Email:"
+        send_me_reset_password_instructions: "Send password reset instructions"
+      edit: 
+        header: "Change your password"
+        new_password: "New password"
+        characters_minimum: "min %{count} symbols"
+        confirm_new_password: "Confirm your password"
+        change_my_password: "Change my password"
     registrations:
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
@@ -45,14 +74,51 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+      new:
+        header: "Sign up new account"
+        first_name: "First name"
+        last_name: "Last name"
+        email: "email"
+        password: "password"
+        characters_minimum: "min %{count} symbols"
+        password_confirmation: "password confirmation"
+        signup: "Sign up"
+      edit:
+        header: "Editing account \"%{resource}\""
+        email: "Email"
+        password: "Password"
+        characters_minimum: "min %{count} symbols"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        we_need_your_current_password_to_confirm_your_changes: "(We need the current password to confirm the changes)"
+        leave_blank_if_you_dont_want_to_change_it: "(Leave blank if you don't want to change)"
+        update: "Update"
+        delete_my_acc: "Delete my account"
+        unhappy: "Unhappy?"
+        are_you_sure: "Are you sure?"
+        back: "Back"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      new:
+        header: "Log in"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+        login: "Log in"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+    shared:
+      links:
+        login: "Log in"
+        signup: "Sing up"
+        forgot_password: "Forgot your password?"
+        dont_recieve_confirmation_instructions: "Didn't receive confirmation instructions?"
+        dont_recieve_unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with_provider: 'Log in by: %{provider}' 
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
