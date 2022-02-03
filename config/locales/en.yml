@@ -30,13 +30,9 @@ en:
       welcome: "Hello, %{user}!"
  
   admin:
-    nav:
-      logout: "Logout"
-      admin_panel: "TestGuru admin panel"
-      welcome: "Hello, admin %{user}!"
     tests:
       index:
-        header: "Tests list"
+        header: "Tests control panel"
         create: "Create test"
         name: "Title"
         category: "Category"
@@ -116,7 +112,8 @@ en:
   shared:
     footer:
       project: "Education project in the Thinknetica school"
-    navbar:
+    nav:
+      admin_tools: "Admin tools"
       welcome: "Hello, %{user}!"
       project: "TestGuru"
       logout: "Logout"
