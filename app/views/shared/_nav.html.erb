@@ -2,6 +2,7 @@
   <%= link_to t('.project'), root_path, class: 'navbar-brand' %>
   <% if current_user.present? && current_user.admin?  %>
     <%= link_to t('.admin_tools'), admin_tests_path, class: 'navbar-brand' %>
+    <%= link_to t('.gists'), admin_gists_path, class: 'navbar-brand' %>
   <% end %>
 
   <div class="navbar-text">

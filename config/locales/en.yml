@@ -102,6 +102,13 @@ en:
         header: "Question:"
         answer_header: "Answer:"
         correctly: "Correct?"
+    gists:
+      index:
+        header: "Incoming gists"
+        gist_id: "Gist ID"
+        user_email: "User email"
+        question: "Question"
+        git_link: "Git link"
 
   layouts:
     admin:
@@ -114,6 +121,7 @@ en:
       project: "Education project in the Thinknetica school"
     nav:
       admin_tools: "Admin tools"
+      gists: "Gists"
       welcome: "Hello, %{user}!"
       project: "TestGuru"
       logout: "Logout"
@@ -129,11 +137,15 @@ en:
       test_passing: "Test passing: "
       next: "Next"
       counter: "Question %{current_question_position} from %{questions_count}"
+      gist_question: "Send gist about question"
     result:
       header: "Test %{title} completed!"
       success: "Result: %{success_percent}%. Success!"
       fail: "Result: %{fail_percent}%. Fail!"
       tests_list: "Try more tests"
+    gist:
+      success: "<a href='%{link}' target='_blank'>Gist was created! Click to show.</a>"
+      failure: "An error occurred while saving gist!"
   
   tests:
     test:
@@ -149,5 +161,8 @@ en:
   tests_mailer:
     completed_test:
       subject: "You have just completed the TestGuru test!"
-      
+
+  services:
+    gist_question_service:
+      description: "A question about test %{title} from TestGuru"
       

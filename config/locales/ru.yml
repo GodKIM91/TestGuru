@@ -102,6 +102,13 @@ ru:
         header: "Вопрос:"
         answer_header: "Ответ:"
         correctly: "Верный?"
+    gists:
+      index:
+        header: "Список полученных гистов"
+        gist_id: "Айди гиста"
+        user_email: "Пользователь"
+        question: "Вопрос"
+        git_link: "Ссылка на git"
 
   layouts:
     admin:
@@ -113,7 +120,8 @@ ru:
     footer:
       project: "Учебный проект в онлайн-школе Thinknetica"
     nav:
-      admin_tools: "Admin tools"
+      admin_tools: "Инструменты админа"
+      gists: "Гисты"
       welcome: "Привет, %{user}!"
       project: "ТестГуру"
       logout: "Выход"
@@ -131,11 +139,15 @@ ru:
       test_passing: "Прохождение теста: "
       next: "Следующий"
       counter: "Вопрос %{current_question_position} из %{questions_count}"
+      gist_question: "Отправить гист по вопросу"
     result:
       header: "Тест %{title} завершен!"
       success: "Результат: %{success_percent}%. Тест пройден!"
       fail: "Результат: %{fail_percent}%. Тест не пройден!"
       tests_list: "Попробовать другие тесты"
+    gist:
+      success: "<a href='%{link}' target='_blank'>Гист успешно сохранён! Кликните для перехода.</a>"
+      failure: "Ошибка сохранения гист!"
   
   tests:
     test:
@@ -151,5 +163,9 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили ТестГуру тест!"
+
+  services:
+    gist_question_service:
+      description: "Вопрос о тесте %{title} из ТестГуру"
       
       
