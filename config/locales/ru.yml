@@ -30,13 +30,9 @@ ru:
       welcome: "Привет, %{user}!"
  
   admin:
-    nav:
-      logout: "Выход"
-      admin_panel: "Панель админа ТестГуру"
-      welcome: "Привет, админ %{user}!"
     tests:
       index:
-        header: "Список тестов"
+        header: "Панель управления тестами"
         create: "Создать тест"
         name: "Наименование"
         category: "Категория"
@@ -116,7 +112,8 @@ ru:
   shared:
     footer:
       project: "Учебный проект в онлайн-школе Thinknetica"
-    navbar:
+    nav:
+      admin_tools: "Admin tools"
       welcome: "Привет, %{user}!"
       project: "ТестГуру"
       logout: "Выход"
