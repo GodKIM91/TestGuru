@@ -1,0 +1,18 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4"><h4><%= t('.header') %></h4></div>
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= t('.gist_id') %></th>
+        <th><%= t('.user_email') %></th>
+        <th><%= t('.question') %></th>
+        <th><%= t('.git_link') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @gists %>
+      </tbody>
+    </table>
+  </div>
+</div
