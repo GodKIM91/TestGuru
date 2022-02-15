@@ -10,17 +10,18 @@ function passwordCheck() {
   var match = document.querySelector('.octicon-check').classList
   var notMatch = document.querySelector('.octicon-x').classList
 
-  if (confirmation.value) {
-    if (password.value === confirmation.value) {
-      match.remove('hide')
-      notMatch.add('hide')
-    } else {
-      match.add('hide')
-      notMatch.remove('hide')
-    }
-
-  } else {
+  if (confirmation.value === "") {
     match.add('hide')
     notMatch.add('hide')
+    return;
+  }
+  
+  if (password.value === confirmation.value) {
+    match.remove('hide')
+    notMatch.add('hide')
+  } else {
+    match.add('hide')
+    notMatch.remove('hide')
   }
 }
+
