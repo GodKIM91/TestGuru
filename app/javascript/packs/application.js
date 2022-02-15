@@ -5,6 +5,8 @@
 
 require("packs/utilities/sorting.js")
 require("packs/utilities/password_check.js")
+require("packs/utilities/form_inline.js")
+require("packs/utilities/progress_bar.js")
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
