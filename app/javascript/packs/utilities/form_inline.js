@@ -28,16 +28,15 @@ function formInlineHandler(testId) {
   var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
   var formInLine = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
 
-  if (formInLine) {
-    if (formInLine.classList.contains('hide')) {
-      testTitle.classList.add('hide')
-      formInLine.classList.remove('hide')
-      link.textContent = 'Отмена'
-    } else {
-      testTitle.classList.remove('hide')
-      formInLine.classList.add('hide')
-      link.textContent = 'Редактировать'
-    }
-}
-}
+  if (!formInLine) { return }
 
+  if (formInLine.classList.contains('hide')) {
+    testTitle.classList.add('hide')
+    formInLine.classList.remove('hide')
+    link.textContent = 'Отмена'
+  } else {
+    testTitle.classList.remove('hide')
+    formInLine.classList.add('hide')
+    link.textContent = 'Редактировать'
+  }
+}
