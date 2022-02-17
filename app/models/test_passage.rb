@@ -28,6 +28,10 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
+  def progress_percent
+    (((current_question_position).to_f / test_question_qty) * 100).round(1)
+  end
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!

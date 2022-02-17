@@ -41,6 +41,8 @@ ru:
         actions: "Действия"
       form:
         back: "Назад"
+      form_inline:
+        submit: "Применить"
       create:
         success: "Тест успешно создан"
       update:
