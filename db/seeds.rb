@@ -6,13 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([
-  { name: 'Bob', email: "bob@gmail.com" },
-  { name: 'Sam', email: "sam@gmail.com" },
-  { name: 'John', email: "john@gmail.com" },
-  { name: 'David', email: "david@gmail.com" },
-  { name: 'Harry', email: "harry@gmail.com" }
-])
+# first user creating by registration form
 
 categories = Category.create([
   { title: 'FRONTEND'},
@@ -21,13 +15,13 @@ categories = Category.create([
 ])
 
 tests = Test.create([
-  { title: 'HTML base', level: 1, category_id: categories[0].id }, 
-  { title: 'Ruby base', level: 1, category_id: categories[1].id },
-  { title: 'Kotlin base', level: 1, category_id: categories[2].id },
-  { title: 'HTML advanced', level: 2, category_id: categories[0].id },
-  { title: 'Ruby advanced', level: 2, category_id: categories[1].id },
-  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id },
-  { title: 'RoR professional', level: 3, category_id: categories[1].id }
+  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: 1 }, 
+  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: 1 },
+  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: 1 },
+  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: 1 },
+  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: 1 },
+  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: 1 },
+  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: 1 }
 ])
 
 questions = Question.create([
@@ -105,13 +99,3 @@ answers = Answer.create([
   { body: '0.0.1', correct: false, question_id:  questions[13].id },
   { body: '0.1.0', correct: true, question_id:  questions[13].id }
 ])
-
-tests_users = TestsUser.create([
-  { user_id: users[0].id, test_id: tests[0].id },
-  { user_id: users[0].id, test_id: tests[1].id },
-  { user_id: users[0].id, test_id: tests[2].id },
-  { user_id: users[1].id, test_id: tests[0].id },
-  { user_id: users[1].id, test_id: tests[1].id },
-  { user_id: users[1].id, test_id: tests[2].id }
-])
-
