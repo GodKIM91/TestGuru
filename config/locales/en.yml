@@ -112,6 +112,18 @@ en:
         question: "Question"
         git_link: "Git link"
 
+  feedbacks:
+    new:
+      header: "Contact with admin"
+      back: "Main page"
+    form:
+      email: "Email for reply"
+      feedback: "Your feedback:"
+      send: "Send"
+    create:
+      success: "your feedback has been sent to admin"
+      fail: "You cant send empty feetback or w/o contact email"
+
   layouts:
     admin:
       header: "TestGuru admin panel"
@@ -121,6 +133,7 @@ en:
   shared:
     footer:
       project: "Education project in the Thinknetica school"
+      feedback: "Feedback"
     nav:
       admin_tools: "Admin tools"
       gists: "Gists"

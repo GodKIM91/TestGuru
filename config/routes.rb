@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :feedbacks
   root 'tests#index'
 
   devise_for :users, controllers: { sessions: 'users/sessions' },
@@ -27,6 +28,8 @@ Rails.application.routes.draw do
     end
     resources :gists, only: :index
   end
+
+  resources :feedbacks, only: %i[new create]
 
 end
 

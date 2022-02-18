@@ -111,6 +111,19 @@ ru:
         user_email: "Пользователь"
         question: "Вопрос"
         git_link: "Ссылка на git"
+  
+  feedbacks:
+    new:
+      header: "Обратная связь с администратором приложения"
+      back: "На главную"
+      fail: "Ошибка отправки отзыва"
+    form:
+      email: "Email для ответа"
+      feedback: "Ваш отзыв:"
+      send: "Отправить"
+    create:
+      success: "Ваш отзыв направлен админитратору"
+      fail: "Вы не можете отправить пустой отзыв или не указав контактный email"
 
   layouts:
     admin:
@@ -121,6 +134,7 @@ ru:
   shared:
     footer:
       project: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Обратная связь"
     nav:
       admin_tools: "Инструменты админа"
       gists: "Гисты"
