@@ -50,7 +50,8 @@ en:
       destroy:
         success: "Test succsessfuly deleted"
       test:
-        edit: "Edit"
+        rename: "Rename"
+        add_question: "Add question"
         delete: "Delete"
         del_confirm: "Delete test %{title}?"
       show:
@@ -172,6 +173,8 @@ en:
       level: "Level"
       questions_qty: "Questions q-ty"
       actions: "Actions"
+    start:
+      fail: "You cant start the test w/o questions"
   
   tests_mailer:
     completed_test:
