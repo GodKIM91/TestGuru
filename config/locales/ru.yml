@@ -50,7 +50,8 @@ ru:
       destroy:
         success: "Тест успешно удалён"
       test:
-        edit: "Редактировать"
+        rename: "Переименовать"
+        add_question: "Добавить вопрос"
         delete: "Удалить"
         del_confirm: "Удалить тест %{title}?"
       show:
@@ -175,6 +176,8 @@ ru:
       level: "Уровень сложности"
       questions_qty: "Кол-во вопросов"
       actions: "Действия"
+    start:
+      fail: "Невозможно начать тест без вопросов"
   
   tests_mailer:
     completed_test:
