@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# first user creating by registration form
+user = User.create(email: 'godkimovsk@gmail.com', password: '123234', first_name: 'Alexander')
 
 categories = Category.create([
   { title: 'FRONTEND'},
@@ -15,13 +15,13 @@ categories = Category.create([
 ])
 
 tests = Test.create([
-  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: 1 }, 
-  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: 1 },
-  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: 1 },
-  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: 1 },
-  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: 1 },
-  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: 1 },
-  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: 1 }
+  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: user.id }, 
+  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: user.id },
+  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: user.id },
+  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: user.id },
+  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: user.id },
+  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: user.id },
+  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: user.id }
 ])
 
 questions = Question.create([
