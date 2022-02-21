@@ -19,7 +19,7 @@ ru:
         title: "Наименование"
         level: "Уровень сложности"
         category_id: "Категория"
-        author_id: "Автор"
+        visible: "Виден для пользователя?"
       question:
         body: "Тело вопроса"
       answer: 
@@ -50,7 +50,8 @@ ru:
       destroy:
         success: "Тест успешно удалён"
       test:
-        edit: "Редактировать"
+        rename: "Переименовать"
+        add_question: "Добавить вопрос"
         delete: "Удалить"
         del_confirm: "Удалить тест %{title}?"
       show:
@@ -111,6 +112,19 @@ ru:
         user_email: "Пользователь"
         question: "Вопрос"
         git_link: "Ссылка на git"
+  
+  feedbacks:
+    new:
+      header: "Обратная связь с администратором приложения"
+      back: "На главную"
+      fail: "Ошибка отправки отзыва"
+    form:
+      email: "Email для ответа"
+      feedback: "Ваш отзыв:"
+      send: "Отправить"
+    create:
+      success: "Ваш отзыв направлен админитратору"
+      fail: "Вы не можете отправить пустой отзыв или не указав контактный email"
 
   layouts:
     admin:
@@ -121,6 +135,7 @@ ru:
   shared:
     footer:
       project: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Обратная связь"
     nav:
       admin_tools: "Инструменты админа"
       gists: "Гисты"
@@ -161,6 +176,8 @@ ru:
       level: "Уровень сложности"
       questions_qty: "Кол-во вопросов"
       actions: "Действия"
+    start:
+      fail: "Невозможно начать тест без вопросов"
   
   tests_mailer:
     completed_test:

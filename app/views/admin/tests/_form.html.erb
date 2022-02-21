@@ -17,8 +17,8 @@
   </p>
 
   <p>
-    <%= form.label :author_id %>
-    <%= form.collection_select :author_id, User.all, :id, :first_name, prompt: true %>
+    <%= form.label :visible %>
+    <%= form.check_box :visible, id: :test_visible %>
   </p>
 
   <p><%= form.submit %></p>

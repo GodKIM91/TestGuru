@@ -19,7 +19,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
-        author_id: "Author"
+        visible: "Is visible for user?"
       question:
         body: "Question body"
       answer: 
@@ -50,7 +50,8 @@ en:
       destroy:
         success: "Test succsessfuly deleted"
       test:
-        edit: "Edit"
+        rename: "Rename"
+        add_question: "Add question"
         delete: "Delete"
         del_confirm: "Delete test %{title}?"
       show:
@@ -112,6 +113,18 @@ en:
         question: "Question"
         git_link: "Git link"
 
+  feedbacks:
+    new:
+      header: "Contact with admin"
+      back: "Main page"
+    form:
+      email: "Email for reply"
+      feedback: "Your feedback:"
+      send: "Send"
+    create:
+      success: "your feedback has been sent to admin"
+      fail: "You cant send empty feetback or w/o contact email"
+
   layouts:
     admin:
       header: "TestGuru admin panel"
@@ -121,6 +134,7 @@ en:
   shared:
     footer:
       project: "Education project in the Thinknetica school"
+      feedback: "Feedback"
     nav:
       admin_tools: "Admin tools"
       gists: "Gists"
@@ -159,6 +173,8 @@ en:
       level: "Level"
       questions_qty: "Questions q-ty"
       actions: "Actions"
+    start:
+      fail: "You cant start the test w/o questions"
   
   tests_mailer:
     completed_test:

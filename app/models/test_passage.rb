@@ -29,7 +29,7 @@ class TestPassage < ApplicationRecord
   end
 
   def progress_percent
-    (((current_question_position).to_f / test_question_qty) * 100).round(1)
+    (((current_question_position - 1).to_f / test_question_qty) * 100).round(1)
   end
 
   def accept!(answer_ids)

@@ -3,12 +3,16 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[start]
 
   def index
-    @tests = Test.all
+    @tests = Test.visible_tests
   end
 
   def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
+    if @test.questions.empty?
+      redirect_to root_path, notice: t('.fail')
+    else
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test)
+    end
   end
 
   private
