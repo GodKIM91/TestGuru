@@ -11,4 +11,5 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, -> (category_name) { joins(:category).where(category: {title: category_name}) }
+  scope :visible_tests, -> { where(visible: true) }
 end

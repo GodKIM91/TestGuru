@@ -19,7 +19,7 @@ ru:
         title: "Наименование"
         level: "Уровень сложности"
         category_id: "Категория"
-        author_id: "Автор"
+        visible: "Виден для пользователя?"
       question:
         body: "Тело вопроса"
       answer: 
