@@ -7,6 +7,11 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, on: %i[create update]
+  before_validation :add_result, on: :update
+
+  scope :by_level, -> (level) { joins(:test).where(tests: { level: level }) }
+  scope :by_category, -> (category) { joins(:test).where(tests: { category: category }) }
+  scope :by_passed, -> { where(passed: true) }
 
   def completed?
     current_question.nil?
@@ -44,7 +49,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-      correct_answers.ids.sort == answer_ids.map(&:to_i).sort if answer_ids.present?
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort if answer_ids.present?
   end
 
   def correct_answers
@@ -58,5 +63,8 @@ class TestPassage < ApplicationRecord
       test.questions.order(:id).where('id > ?', current_question.id).first
     end
   end
-  
+
+  def add_result
+    self.success? ? self.passed = true : self.passed = false
+  end
 end

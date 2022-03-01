@@ -99,3 +99,9 @@ answers = Answer.create([
   { body: '0.0.1', correct: false, question_id:  questions[13].id },
   { body: '0.1.0', correct: true, question_id:  questions[13].id }
 ])
+
+badges = Badge.create([
+  { name: 'Без права на ошибку!', image: 'first_try', rule: 'success_on_first_try', parameter: 'Пройти любой тест с первой попытки' }, 
+  { name: 'Гуру категории!', image: 'success_category', rule: 'success_category', parameter: 'Пройти все тесты в категории' },
+  { name: 'Гуру уровня!', image: 'success_level', rule: 'success_all_level', parameter: 'Пройти все тесты в одном уровне сложности' }
+])
