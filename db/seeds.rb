@@ -15,13 +15,13 @@ categories = Category.create([
 ])
 
 tests = Test.create([
-  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: user.id }, 
-  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: user.id },
-  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: user.id },
-  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: user.id },
-  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: user.id },
-  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: user.id },
-  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: user.id }
+  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: user.id, visible: true }, 
+  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: user.id, visible: true },
+  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: user.id, visible: true },
+  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: user.id, visible: true },
+  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: user.id, visible: true },
+  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: user.id, visible: true },
+  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: user.id, visible: true }
 ])
 
 questions = Question.create([
