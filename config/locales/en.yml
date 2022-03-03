@@ -36,7 +36,8 @@ en:
         image: "Badge image"
         rule: "Badge method"
         name: "Badge name"
-        parameter: "About badge"
+        parameter: "Badge param"
+        description: "Basge description"
   users:
     sessions:
       welcome: "Hello, %{user}!"
@@ -140,7 +141,8 @@ en:
         image: "Badge image"
         rule: "Badge method"
         name: "Badge name"
-        parameter: "About badge"
+        parameter: "Badge param"
+        description: "Badge description"
         new_badge: "Create new badge"
       new:
         new_badge: "Badge creating:"
@@ -209,8 +211,8 @@ en:
       exists_badges: "Existing badges"
       badge_name: "Badge name"
       badge_view: "Badge"
-      badge_method: "Badge method"
-      badge_parameter: "About badge"
+      badge_parameter: "Badge param"
+      badge_description: "Badge description"
   
   tests:
     test:

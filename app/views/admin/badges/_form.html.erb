@@ -4,7 +4,7 @@
   <div class="form-group">
     <p>
       <%= form.label :rule %>
-      <%= form.select(:rule, [category_rule, first_try_rule, level_rule], prompt: true) %>
+      <%= form.select :rule, Badge.rule, prompt: true %>
     </p>
 
     <p>
@@ -20,6 +20,11 @@
     <p>
       <%= form.label :parameter %>
       <%= form.text_field :parameter %>
+    </p>
+
+    <p>
+      <%= form.label :description %>
+      <%= form.text_field :description %>
     </p>
 
     <p><%= form.submit class: "btn btn-primary" %></p>

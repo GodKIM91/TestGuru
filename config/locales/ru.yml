@@ -36,7 +36,8 @@ ru:
         image: "Изображение награды"
         rule: "Метод награды"
         name: "Название награды"
-        parameter: "Описание награды"
+        parameter: "Параметр награды"
+        description: "Описание награды"
   users:
     sessions:
       welcome: "Привет, %{user}!"
@@ -140,7 +141,8 @@ ru:
         image: "Изображение награды"
         rule: "Метод награды"
         name: "Название награды"
-        parameter: "Описание награды"
+        parameter: "Параметр награды"
+        description: "Описание награды"
         new_badge: "Создать новую награду"
       new:
         new_badge: "Создание награды:"
@@ -213,7 +215,8 @@ ru:
       badge_name: "Название награды"
       badge_view: "Награда"
       badge_method: "Метод награды"
-      badge_parameter: "Описание награды"
+      badge_parameter: "Параметр награды"
+      badge_description: "Описание награды"
 
   tests:
     test:
