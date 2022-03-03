@@ -126,19 +126,19 @@ badges = Badge.create([
     description: 'Завершить все тесты в категории BACKEND' },
 
   { name: 'Гуру уровня 1!', 
-    image: 'success_category', 
-    rule: 'success_category', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
     parameter: '1', 
     description: 'Завершить все тесты уровня 1' },
 
   { name: 'Гуру уровня 2!', 
-    image: 'success_category', 
-    rule: 'success_category', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
     parameter: '2', 
     description: 'Завершить все тесты уровня 2' },
     
   { name: 'Гуру уровня 3!', 
-    image: 'success_category', 
-    rule: 'success_category', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
     parameter: '3', 
     description: 'Завершить все тесты уровня 3' }])
