@@ -47,9 +47,9 @@ answers = Answer.create([
   { body: '<s>', correct: false, question_id: questions[0].id },
   { body: '<b>', correct: false, question_id: questions[0].id },
   # 2
-  { body: '<i>', correct: true, question_id: questions[1].id },
+  { body: '<i>', correct: false, question_id: questions[1].id },
   { body: '<s>', correct: false, question_id: questions[1].id },
-  { body: '<b>', correct: false, question_id: questions[1].id },
+  { body: '<b>', correct: true, question_id: questions[1].id },
   # 3
   { body: 'struct', correct: false, question_id: questions[2].id },
   { body: 'sort', correct: true, question_id: questions[2].id },
