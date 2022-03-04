@@ -10,8 +10,7 @@ class TestPassage < ApplicationRecord
   before_validation :add_result, on: :update
 
   scope :by_level, -> (level) { joins(:test).where(tests: { level: level }) }
-  scope :by_category, -> (category) { joins(:test).where(tests: { category: category }) }
-  scope :by_passed, -> { where(passed: true) }
+  scope :passed, -> { where(passed: true) }
 
   def completed?
     current_question.nil?
