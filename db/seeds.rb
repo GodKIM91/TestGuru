@@ -101,17 +101,11 @@ answers = Answer.create([
 ])
 
 badges = Badge.create([
-  { name: 'HTML base GURU!', 
+  { name: 'First try guru!', 
     image: 'first_try', 
     rule: 'success_on_first_try', 
-    parameter: 'HTML base',
-    description: 'Пройти тест HTML base с первой попытки' },
-
-  { name: 'Ruby advanced GURU!', 
-    image: 'first_try', 
-    rule: 'success_on_first_try', 
-    parameter: 'Ruby advanced',
-    description: 'Пройти тест Ruby advanced с первой попытки' },
+    parameter: 'First try',
+    description: 'Пройти любой тест с первой попытки' },
 
   { name: 'Гуру FRONTEND!', 
     image: 'success_category', 
@@ -124,6 +118,18 @@ badges = Badge.create([
     rule: 'success_category', 
     parameter: 'BACKEND', 
     description: 'Завершить все тесты в категории BACKEND' },
+
+  { name: 'Гуру MOBILE!', 
+    image: 'success_category', 
+    rule: 'success_category', 
+    parameter: 'MOBILE', 
+    description: 'Завершить все тесты в категории MOBILE' },
+
+  { name: 'Гуру уровня 0!', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
+    parameter: '0', 
+    description: 'Завершить все тесты уровня 0' },
 
   { name: 'Гуру уровня 1!', 
     image: 'success_level', 

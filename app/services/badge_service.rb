@@ -16,7 +16,7 @@ class BadgeService
   private
   
   # прохождение любого теста с первой попытки
-  def success_on_first_try?(*test_title)
+  def success_on_first_try?(_test_title)
     @test_passage.success? && @user.test_passages.where(test: @test).count == 1
   end
 
