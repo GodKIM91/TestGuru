@@ -2,6 +2,11 @@ en:
   hello: "Hello world"
 
   helpers:
+    test:
+      easy: "Junior"
+      elementary: "Middle"
+      advanced: "Senoir"
+      hard: "Maestro"
     select:
       prompt: "Please select"
     submit:
@@ -14,6 +19,8 @@ en:
       answer:
         create: "Create answer"
         update: "Update answer"
+      badge:
+        create: "Create badge"
     label:
       test:
         title: "Title"
@@ -25,6 +32,12 @@ en:
       answer: 
         body: "Answer body"
         correct: "Correct?"
+      badge:
+        image: "Badge image"
+        rule: "Badge method"
+        name: "Badge name"
+        parameter: "Badge param"
+        description: "Basge description"
   users:
     sessions:
       welcome: "Hello, %{user}!"
@@ -112,6 +125,30 @@ en:
         user_email: "User email"
         question: "Question"
         git_link: "Git link"
+    badges:
+      badge:
+        show_badge: "Show"
+        edit_badge: "Edit"
+        delete_badge: "Delete"
+        badge_del_confirm: "Are you sure? Badge will be removed..."
+      show:
+        name: "Badge name:"
+        rule: "Badge method:"
+        edit: "Edit"
+        back: "Back"
+      index:
+        header: "Created badges"
+        image: "Badge image"
+        rule: "Badge method"
+        name: "Badge name"
+        parameter: "Badge param"
+        description: "Badge description"
+        new_badge: "Create new badge"
+      new:
+        new_badge: "Badge creating:"
+        back: "Back"
+      create:
+        success: "Badge successfuly created!"
 
   feedbacks:
     new:
@@ -136,13 +173,15 @@ en:
       project: "Education project in the Thinknetica school"
       feedback: "Feedback"
     nav:
-      admin_tools: "Admin tools"
+      tests_control: "Tests control"
+      badges_control: "Badges control"
       gists: "Gists"
       welcome: "Hello, %{user}!"
       project: "TestGuru"
       logout: "Logout"
       signup: "Sign up"
       login: "Log in"
+      badges: "Badges"
     errors:
       header:
         one: "%{count} error detected"
@@ -162,6 +201,18 @@ en:
     gist:
       success: "<a href='%{link}' target='_blank'>Gist was created! Click to show.</a>"
       failure: "An error occurred while saving gist!"
+    update:
+      got_badge: "You recieved a badge! See badges menu."
+      not_got_badge: "You passed the test w/o badges"
+
+  user_badges:
+    index:
+      received_badges: "Recieved badges"
+      exists_badges: "Existing badges"
+      badge_name: "Badge name"
+      badge_view: "Badge"
+      badge_parameter: "Badge param"
+      badge_description: "Badge description"
   
   tests:
     test:

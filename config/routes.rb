@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :feedbacks
   root 'tests#index'
 
   devise_for :users, controllers: { sessions: 'users/sessions' },
@@ -18,6 +17,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'badges', to: 'user_badges#index'
+  resources :feedbacks, only: %i[new create]
+
   namespace :admin do
     resources :tests do
       patch :update_inline, on: :member
@@ -27,9 +29,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
-
-  resources :feedbacks, only: %i[new create]
-
 end
 

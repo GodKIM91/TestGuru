@@ -15,13 +15,13 @@ categories = Category.create([
 ])
 
 tests = Test.create([
-  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: user.id }, 
-  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: user.id },
-  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: user.id },
-  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: user.id },
-  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: user.id },
-  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: user.id },
-  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: user.id }
+  { title: 'HTML base', level: 1, category_id: categories[0].id, author_id: user.id, visible: true }, 
+  { title: 'Ruby base', level: 1, category_id: categories[1].id, author_id: user.id, visible: true },
+  { title: 'Kotlin base', level: 1, category_id: categories[2].id, author_id: user.id, visible: true },
+  { title: 'HTML advanced', level: 2, category_id: categories[0].id, author_id: user.id, visible: true },
+  { title: 'Ruby advanced', level: 2, category_id: categories[1].id, author_id: user.id, visible: true },
+  { title: 'Kotlin advanced', level: 2, category_id: categories[2].id, author_id: user.id, visible: true },
+  { title: 'RoR professional', level: 3, category_id: categories[1].id, author_id: user.id, visible: true }
 ])
 
 questions = Question.create([
@@ -47,9 +47,9 @@ answers = Answer.create([
   { body: '<s>', correct: false, question_id: questions[0].id },
   { body: '<b>', correct: false, question_id: questions[0].id },
   # 2
-  { body: '<i>', correct: true, question_id: questions[1].id },
+  { body: '<i>', correct: false, question_id: questions[1].id },
   { body: '<s>', correct: false, question_id: questions[1].id },
-  { body: '<b>', correct: false, question_id: questions[1].id },
+  { body: '<b>', correct: true, question_id: questions[1].id },
   # 3
   { body: 'struct', correct: false, question_id: questions[2].id },
   { body: 'sort', correct: true, question_id: questions[2].id },
@@ -99,3 +99,52 @@ answers = Answer.create([
   { body: '0.0.1', correct: false, question_id:  questions[13].id },
   { body: '0.1.0', correct: true, question_id:  questions[13].id }
 ])
+
+badges = Badge.create([
+  { name: 'First try guru!', 
+    image: 'first_try', 
+    rule: 'success_on_first_try', 
+    parameter: 'First try',
+    description: 'Пройти любой тест с первой попытки' },
+
+  { name: 'Гуру FRONTEND!', 
+    image: 'success_category', 
+    rule: 'success_category', 
+    parameter: 'FRONTEND', 
+    description: 'Завершить все тесты в категории FRONTEND' },
+
+  { name: 'Гуру BACKEND!', 
+    image: 'success_category', 
+    rule: 'success_category', 
+    parameter: 'BACKEND', 
+    description: 'Завершить все тесты в категории BACKEND' },
+
+  { name: 'Гуру MOBILE!', 
+    image: 'success_category', 
+    rule: 'success_category', 
+    parameter: 'MOBILE', 
+    description: 'Завершить все тесты в категории MOBILE' },
+
+  { name: 'Гуру уровня 0!', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
+    parameter: '0', 
+    description: 'Завершить все тесты уровня 0' },
+
+  { name: 'Гуру уровня 1!', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
+    parameter: '1', 
+    description: 'Завершить все тесты уровня 1' },
+
+  { name: 'Гуру уровня 2!', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
+    parameter: '2', 
+    description: 'Завершить все тесты уровня 2' },
+    
+  { name: 'Гуру уровня 3!', 
+    image: 'success_level', 
+    rule: 'success_all_level', 
+    parameter: '3', 
+    description: 'Завершить все тесты уровня 3' }])

@@ -2,6 +2,11 @@ ru:
   hello: "Привет мир"
 
   helpers:
+    test:
+      easy: "Джун"
+      elementary: "Мидл"
+      advanced: "Сеньор"
+      hard: "Маэстро"
     select:
       prompt: "Выберете из списка"
     submit:
@@ -14,6 +19,8 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Обновить ответ"
+      badge:
+        create: "Создать награду"
     label:
       test:
         title: "Наименование"
@@ -25,6 +32,12 @@ ru:
       answer: 
         body: "Тело ответа"
         correct: "Верный?"
+      badge:
+        image: "Изображение награды"
+        rule: "Метод награды"
+        name: "Название награды"
+        parameter: "Параметр награды"
+        description: "Описание награды"
   users:
     sessions:
       welcome: "Привет, %{user}!"
@@ -112,6 +125,30 @@ ru:
         user_email: "Пользователь"
         question: "Вопрос"
         git_link: "Ссылка на git"
+    badges:
+      badge:
+        show_badge: "Просмотреть"
+        edit_badge: "Редактировать"
+        delete_badge: "Удалить"
+        badge_del_confirm: "Вы уверены что хотите удалить награду?"
+      show:
+        name: "Название награды:"
+        rule: "Метод награды:"
+        edit: "Редактировать"
+        back: "Назад"
+      index:
+        header: "Созданные награды"
+        image: "Изображение награды"
+        rule: "Метод награды"
+        name: "Название награды"
+        parameter: "Параметр награды"
+        description: "Описание награды"
+        new_badge: "Создать новую награду"
+      new:
+        new_badge: "Создание награды:"
+        back: "Назад"
+      create:
+        success: "Награда успешно создана!"
   
   feedbacks:
     new:
@@ -137,13 +174,15 @@ ru:
       project: "Учебный проект в онлайн-школе Thinknetica"
       feedback: "Обратная связь"
     nav:
-      admin_tools: "Инструменты админа"
+      tests_control: "Управление тестами"
+      badges_control: "Управление наградами"
       gists: "Гисты"
       welcome: "Привет, %{user}!"
       project: "ТестГуру"
       logout: "Выход"
       signup: "Регистрация"
       login: "Войти"
+      badges: "Награды"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -165,7 +204,20 @@ ru:
     gist:
       success: "<a href='%{link}' target='_blank'>Гист успешно сохранён! Кликните для перехода.</a>"
       failure: "Ошибка сохранения гист!"
-  
+    update:
+      got_badge: "Вы получили награду! См. раздел награды."
+      not_got_badge: "Вы завершили тест без наград"
+
+  user_badges:
+    index:
+      received_badges: "Полученные награды"
+      exists_badges: "Возможные награды"
+      badge_name: "Название награды"
+      badge_view: "Награда"
+      badge_method: "Метод награды"
+      badge_parameter: "Параметр награды"
+      badge_description: "Описание награды"
+
   tests:
     test:
       start: "Начать тест"
