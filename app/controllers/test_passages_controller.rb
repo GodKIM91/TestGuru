@@ -8,7 +8,7 @@ class TestPassagesController < ApplicationController
 
   def update
     @test_passage.accept!(params[:answer_ids])
-    if @test_passage.completed?
+    if @test_passage.completed? || @test_passage.time_out?
       flash_options = { notice: t('.not_got_badge') }
       badges_count = current_user.badges.size
       current_user.badges << BadgeService.new(@test_passage).call

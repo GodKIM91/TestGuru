@@ -193,6 +193,7 @@ en:
       next: "Next"
       counter: "Question %{current_question_position} from %{questions_count}"
       gist_question: "Send gist about question"
+      time_left: "Remaining time: "
     result:
       header: "Test %{title} completed!"
       success: "Result: %{success_percent}%. Success!"
