@@ -16,6 +16,14 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def time_out?
+    (test.timer - (Time.now - created_at)).to_i <= 0
+  end
+
+  def time_left
+    self.test.timer - (Time.now - self.created_at).to_i if self.test.timer > 0
+  end
+
   def test_question_qty
     test.questions.count
   end
@@ -25,7 +33,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    percent_correct >= PASSING_SCORE
+    percent_correct >= PASSING_SCORE && !time_out?
   end
 
   def current_question_position
@@ -44,7 +52,11 @@ class TestPassage < ApplicationRecord
   private
   
   def before_validation_set_question
-    self.current_question = next_question
+    self.current_question = if new_record?
+                              test.questions.first
+                            else
+                              test.questions.order(:id).where('id > ?', current_question.id).first
+                            end
   end
 
   def correct_answer?(answer_ids)
@@ -53,14 +65,6 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct_answers
-  end
-
-  def next_question
-    if new_record?
-      test.questions.first
-    else
-      test.questions.order(:id).where('id > ?', current_question.id).first
-    end
   end
 
   def add_result

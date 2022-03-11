@@ -196,6 +196,7 @@ ru:
       next: "Следующий"
       counter: "Вопрос %{current_question_position} из %{questions_count}"
       gist_question: "Отправить гист по вопросу"
+      time_left: "Остаток времени на прохождение: "
     result:
       header: "Тест %{title} завершен!"
       success: "Результат: %{success_percent}%. Тест пройден!"
